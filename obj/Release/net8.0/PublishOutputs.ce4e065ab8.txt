@@ -1,6 +1,12 @@
 C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\publish\cdsa.solutions.exe
+C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\publish\publish\web.config
 C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\publish\appsettings.Development.json
 C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\publish\appsettings.json
+C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\publish\publish\appsettings.Development.json
+C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\publish\publish\appsettings.json
+C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\publish\publish\cdsa.solutions.deps.json
+C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\publish\publish\cdsa.solutions.runtimeconfig.json
+C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\publish\publish\cdsa.solutions.staticwebassets.endpoints.json
 C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\publish\cdsa.solutions.dll
 C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\publish\cdsa.solutions.deps.json
 C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\publish\cdsa.solutions.runtimeconfig.json

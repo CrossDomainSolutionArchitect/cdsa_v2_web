@@ -31,3 +31,10 @@ C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\obj\Debug\net8.0\ref
 C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\obj\Debug\net8.0\cdsa.solutions.pdb
 C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\obj\Debug\net8.0\cdsa.solutions.genruntimeconfig.cache
 C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\obj\Debug\net8.0\ref\cdsa.solutions.dll
+C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\bin\Debug\net8.0\publish\web.config
+C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\bin\Debug\net8.0\publish\appsettings.Development.json
+C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\bin\Debug\net8.0\publish\appsettings.json
+C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\bin\Debug\net8.0\publish\cdsa.solutions.deps.json
+C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\bin\Debug\net8.0\publish\cdsa.solutions.runtimeconfig.json
+C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\bin\Debug\net8.0\publish\cdsa.solutions.staticwebassets.endpoints.json
+C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\obj\Debug\net8.0\cdsa.solutions.sourcelink.json

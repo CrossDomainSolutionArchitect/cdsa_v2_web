@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "cdsa.solutions/1.0.0": {
+        "runtime": {
+          "cdsa.solutions.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "cdsa.solutions/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
