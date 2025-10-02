@@ -1,5 +1,6 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\ChatGPT Image Oct 2, 2025, 05_32_49 AM.png
 wwwroot\images\Technological Growth_ CDSA Logo.png
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css

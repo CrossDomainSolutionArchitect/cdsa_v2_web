@@ -1238,8 +1238,555 @@ main {
     box-shadow: 0 12px 48px rgba(0, 0, 0, 0.1);
 }
 
+/* ============================================
+   Eco-Creative Hub Page Styles
+   ============================================ */
+
+/* Flyer Section */
+.flyer-section {
+    background: white;
+}
+
+.flyer-container {
+    background: var(--color-light-blue-bg);
+    padding: 32px;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.flyer-image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+    .flyer-image:hover {
+        transform: scale(1.02);
+    }
+
+/* Hero Section */
+.ecohub-hero {
+    background: linear-gradient(135deg, var(--color-green) 0%, var(--color-deep-blue) 100%);
+    color: white;
+    padding: 80px 0;
+}
+
+    .ecohub-hero .hero-title {
+        color: white;
+        font-size: 2.8rem;
+        line-height: 1.2;
+    }
+
+    .ecohub-hero .hero-lead {
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 1.3rem;
+        line-height: 1.6;
+    }
+
+/* Hero Tags */
+.hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tag-badge {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Hero Stats Card */
+.hero-stats-card {
+    background: white;
+    padding: 32px;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--color-light-blue-bg);
+}
+
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+
+.stat-number {
+    font-family: 'Zilla Slab', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-green);
+}
+
+.stat-label {
+    color: var(--color-dark-gray-70);
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+/* Opportunity Cards */
+.opportunity-card {
+    padding: 40px;
+    border-radius: var(--border-radius-lg);
+    height: 100%;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.problem-card {
+    background: linear-gradient(135deg, rgba(255, 111, 32, 0.1) 0%, rgba(255, 111, 32, 0.05) 100%);
+    border-left: 4px solid var(--color-orange);
+}
+
+.solution-card {
+    background: linear-gradient(135deg, rgba(0, 146, 69, 0.1) 0%, rgba(0, 146, 69, 0.05) 100%);
+    border-left: 4px solid var(--color-green);
+}
+
+.opportunity-card .card-title {
+    font-family: 'Zilla Slab', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-deep-blue);
+    margin-bottom: 24px;
+}
+
+.challenge-list,
+.solution-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .challenge-list li,
+    .solution-list li {
+        padding: 12px 0 12px 32px;
+        position: relative;
+        line-height: 1.6;
+        color: var(--color-dark-gray-90);
+    }
+
+        .challenge-list li::before {
+            content: '⚠️';
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+
+        .solution-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--color-green);
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+/* Workflow Steps */
+.workflow-step {
+    background: white;
+    padding: 32px 24px;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+    position: relative;
+}
+
+    .workflow-step:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 32px rgba(0, 146, 69, 0.2);
+    }
+
+.step-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.step-number {
+    font-family: 'Zilla Slab', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-green);
+    margin-bottom: 12px;
+}
+
+.step-title {
+    font-family: 'Zilla Slab', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-deep-blue);
+    margin-bottom: 12px;
+}
+
+.step-description {
+    color: var(--color-dark-gray-70);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Business Model Cards */
+.model-card {
+    background: white;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    height: 100%;
+}
+
+.model-header {
+    background: linear-gradient(135deg, var(--color-deep-blue) 0%, var(--color-green) 100%);
+    padding: 24px 28px;
+}
+
+.model-title {
+    font-family: 'Zilla Slab', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+}
+
+.model-content {
+    padding: 28px;
+}
+
+.content-subtitle {
+    font-family: 'Zilla Slab', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-deep-blue);
+    margin-bottom: 12px;
+}
+
+.model-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .model-list li {
+        padding: 8px 0 8px 28px;
+        position: relative;
+        color: var(--color-dark-gray-90);
+        line-height: 1.6;
+    }
+
+        .model-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--color-orange);
+            font-weight: 700;
+        }
+
+/* Timeline Roadmap */
+.timeline-roadmap {
+    position: relative;
+}
+
+.roadmap-phase {
+    background: white;
+    padding: 32px;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    margin-bottom: 24px;
+    border-left: 4px solid var(--color-green);
+}
+
+    .roadmap-phase:last-child {
+        margin-bottom: 0;
+    }
+
+.phase-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.phase-badge {
+    background: linear-gradient(135deg, var(--color-green) 0%, var(--color-deep-blue) 100%);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.phase-duration {
+    color: var(--color-dark-gray-70);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.phase-title {
+    font-family: 'Zilla Slab', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-deep-blue);
+    margin-bottom: 16px;
+}
+
+.phase-activities {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .phase-activities li {
+        padding: 10px 0 10px 32px;
+        position: relative;
+        color: var(--color-dark-gray-90);
+        line-height: 1.6;
+    }
+
+        .phase-activities li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--color-green);
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+
+/* Funding Card */
+.funding-card {
+    background: white;
+    padding: 40px;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.funding-title {
+    font-family: 'Zilla Slab', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-deep-blue);
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.funding-items {
+    margin-bottom: 24px;
+}
+
+.funding-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--color-light-blue-bg);
+}
+
+    .funding-item:last-child {
+        border-bottom: 2px solid var(--color-green);
+    }
+
+.item-name {
+    font-weight: 600;
+    color: var(--color-dark-gray-90);
+}
+
+.item-cost {
+    font-family: 'Zilla Slab', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-green);
+}
+
+.funding-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    background: linear-gradient(135deg, var(--color-light-blue-bg) 0%, rgba(230, 238, 245, 0.5) 100%);
+    border-radius: 8px;
+}
+
+.total-label {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--color-deep-blue);
+}
+
+.total-amount {
+    font-family: 'Zilla Slab', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-green);
+}
+
+/* Impact Projection */
+.impact-projection {
+    background: white;
+    padding: 32px;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.projection-title {
+    font-family: 'Zilla Slab', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-deep-blue);
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.impact-metric {
+    background: var(--color-light-blue-bg);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.metric-value {
+    font-family: 'Zilla Slab', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-green);
+    margin-bottom: 8px;
+}
+
+.metric-label {
+    color: var(--color-dark-gray-70);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Why Project Cards */
+.why-card {
+    background: white;
+    padding: 32px 24px;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+    .why-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
+    }
+
+.why-icon {
+    font-size: 3.5rem;
+    margin-bottom: 16px;
+}
+
+.why-title {
+    font-family: 'Zilla Slab', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-deep-blue);
+    margin-bottom: 12px;
+}
+
+.why-text {
+    color: var(--color-dark-gray-90);
+    line-height: 1.6;
+}
+
+/* Gradient Background Section */
+.bg-gradient-section {
+    background: linear-gradient(135deg, var(--color-deep-blue) 0%, var(--color-green) 100%);
+}
+
+/* EcoHub CTA Section */
+.ecohub-cta-section {
+    background: var(--color-light-blue-bg);
+}
+
+    .ecohub-cta-section .cta-title {
+        font-family: 'Zilla Slab', serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--color-deep-blue);
+    }
+
+    .ecohub-cta-section .cta-subtitle {
+        font-size: 1.2rem;
+        color: var(--color-dark-gray-70);
+    }
+
 /* Mobile Styles */
 @media (max-width: 768px) {
+    .ecohub-hero {
+        padding: 60px 0;
+    }
+
+        .ecohub-hero .hero-title {
+            font-size: 2rem;
+        }
+
+        .ecohub-hero .hero-lead {
+            font-size: 1.1rem;
+        }
+
+    .hero-stats-card {
+        margin-top: 32px;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .opportunity-card {
+        padding: 24px;
+        margin-bottom: 20px;
+    }
+
+        .opportunity-card .card-title {
+            font-size: 1.5rem;
+        }
+
+    .workflow-step {
+        margin-bottom: 20px;
+    }
+
+    .model-card {
+        margin-bottom: 24px;
+    }
+
+    .funding-card {
+        padding: 24px;
+    }
+
+    .funding-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .funding-total {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .total-amount {
+        font-size: 1.8rem;
+    }
+
+    .ecohub-cta-section .cta-title {
+        font-size: 1.8rem;
+    }
+
+    .ecohub-cta-section .cta-subtitle {
+        font-size: 1rem;
+    }
     .mzp-c-menu-button {
         display: inline-block;
     }
