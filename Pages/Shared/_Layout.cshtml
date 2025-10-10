@@ -40,14 +40,32 @@
             <nav class="c-navigation-menu" id="navMenu">
                 <ul class="mzp-c-menu-list">
                     <li class="mzp-c-menu-item"><a href="/About" class="mzp-c-menu-title">About</a></li>
-                    <li class="mzp-c-menu-item"><a href="/EcoHub" class="mzp-c-menu-title">Eco-Creative Hub</a></li>
+
+                    <!-- Eco-Creative Hub Dropdown -->
+                    <li class="mzp-c-menu-item mzp-has-dropdown">
+                        <a href="#" class="mzp-c-menu-title">Local Economy</a>
+                        <ul class="mzp-c-menu-panel">
+                            <li class="mzp-c-menu-panel-item"><a href="/EcoHub">EcoHub</a></li>
+                            <li class="mzp-c-menu-panel-item disabled"><a href="#">Labour Skills development</a></li>
+                            <li class="mzp-c-menu-panel-item disabled"><a href="#">Jobs</a></li>
+                        </ul>
+                    </li>
+
                     <li class="mzp-c-menu-item"><a href="#contact" class="mzp-c-menu-title">Blog</a></li>
-                    <li class="mzp-c-menu-item"><a href="#" class="mzp-c-menu-title">Study abroad</a></li>
+
+                    <!-- Study Abroad Dropdown -->
+                    <li class="mzp-c-menu-item mzp-has-dropdown">
+                        <a href="#" class="mzp-c-menu-title">Study abroad</a>
+                        <ul class="mzp-c-menu-panel">
+                            <li class="mzp-c-menu-panel-item"><a href="https://www.internationalscholarships.dhet.gov.za/index.php/scholarships" target="_blank">International Scholarships</a></li>
+                            <li class="mzp-c-menu-panel-item disabled"><a href="#" target="_blank">Local Scholarship</a></li>
+                        </ul>
+                    </li>
+
                     <li class="mzp-c-menu-item"><a href="/BoardMembers" class="mzp-c-menu-title" id="boardMembersLink">Board Members</a></li>
                     <li class="mzp-c-menu-item"><a href="/Apply" class="mzp-c-menu-title">Apply</a></li>
                 </ul>
             </nav>
-
             <!-- Social Media Links -->
             <div class="c-navigation-social">
                 <a href="https://www.linkedin.com/company/cdsa-cross-domain-solution-architect" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
@@ -101,12 +119,57 @@
     @RenderSection("Scripts", required: false)
     
     <script>
+               // Replace the script section in your layout.cshtml with this:
+
         // Mobile menu toggle
         const menuBtn = document.getElementById('menuBtn');
         const navMenu = document.getElementById('navMenu');
 
         menuBtn.addEventListener('click', () => {
             navMenu.classList.toggle('active');
+        });
+
+        // Mobile dropdown toggles
+        document.addEventListener('DOMContentLoaded', function() {
+            // Only add click handlers for mobile
+            if (window.innerWidth <= 768) {
+                const dropdownItems = document.querySelectorAll('.mzp-has-dropdown');
+
+                dropdownItems.forEach(item => {
+                    const title = item.querySelector('.mzp-c-menu-title');
+
+                    title.addEventListener('click', function(e) {
+                        // If we're on mobile and this is a dropdown parent
+                        if (window.innerWidth <= 768 && item.classList.contains('mzp-has-dropdown')) {
+                            e.preventDefault();
+
+                            // Toggle the active class
+                            item.classList.toggle('active');
+
+                            // Close other dropdowns
+                            dropdownItems.forEach(otherItem => {
+                                if (otherItem !== item) {
+                                    otherItem.classList.remove('active');
+                                }
+                            });
+                        }
+                    });
+                });
+            }
+        });
+
+        // Handle window resize
+        let resizeTimer;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function() {
+                // Remove active classes when switching to desktop
+                if (window.innerWidth > 768) {
+                    document.querySelectorAll('.mzp-has-dropdown').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                }
+            }, 250);
         });
             
     </script>

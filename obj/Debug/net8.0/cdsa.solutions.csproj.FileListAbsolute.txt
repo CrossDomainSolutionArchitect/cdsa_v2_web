@@ -44,3 +44,9 @@ C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\bin\Debug\net8.0\pub
 C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\bin\Debug\net8.0\publish\publish\cdsa.solutions.deps.json
 C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\bin\Debug\net8.0\publish\publish\cdsa.solutions.runtimeconfig.json
 C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\bin\Debug\net8.0\publish\publish\cdsa.solutions.staticwebassets.endpoints.json
+C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\bin\Debug\net8.0\publish\publish\publish\web.config
+C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\bin\Debug\net8.0\publish\publish\publish\appsettings.Development.json
+C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\bin\Debug\net8.0\publish\publish\publish\appsettings.json
+C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\bin\Debug\net8.0\publish\publish\publish\cdsa.solutions.deps.json
+C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\bin\Debug\net8.0\publish\publish\publish\cdsa.solutions.runtimeconfig.json
+C:\Users\VERNARD\source\repos\cdsa.solutions\cdsa.solutions\bin\Debug\net8.0\publish\publish\publish\cdsa.solutions.staticwebassets.endpoints.json

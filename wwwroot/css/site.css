@@ -92,6 +92,122 @@ body {
         transform: scale(1.05);
         filter: brightness(1.1);
     }
+/* ============================================
+   Dropdown Menu Styles
+   Add this to your site.css file
+   ============================================ */
+
+/* Dropdown Parent Item */
+.mzp-c-menu-item.mzp-has-dropdown {
+    position: relative;
+}
+
+.mzp-has-dropdown > .mzp-c-menu-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+    /* Add dropdown arrow indicator */
+    .mzp-has-dropdown > .mzp-c-menu-title::after {
+        content: '▼';
+        font-size: 10px;
+        transition: transform 0.3s ease;
+    }
+
+.mzp-has-dropdown:hover > .mzp-c-menu-title::after {
+    transform: rotate(180deg);
+}
+
+/* Dropdown Panel */
+.mzp-c-menu-panel {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 12px 0;
+    margin-top: 8px;
+    min-width: 200px;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+/* Show dropdown on hover */
+.mzp-has-dropdown:hover .mzp-c-menu-panel {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Dropdown Items */
+.mzp-c-menu-panel-item {
+    list-style: none;
+}
+
+    .mzp-c-menu-panel-item a {
+        display: block;
+        padding: 10px 20px;
+        color: var(--color-dark-gray-90);
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+        transition: all 0.2s ease;
+    }
+
+        .mzp-c-menu-panel-item a:hover {
+            background-color: var(--color-light-blue-bg);
+            color: var(--color-green);
+            padding-left: 24px;
+        }
+
+/* Mobile Dropdown Styles */
+@media (max-width: 768px) {
+    .mzp-has-dropdown {
+        position: relative;
+    }
+
+    .mzp-c-menu-panel {
+        position: static;
+        box-shadow: none;
+        margin-top: 0;
+        margin-left: 20px;
+        padding: 8px 0;
+        background: var(--color-light-blue-bg);
+        border-radius: 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        transition: max-height 0.3s ease;
+    }
+
+    .mzp-has-dropdown.active .mzp-c-menu-panel {
+        max-height: 500px;
+        padding: 8px 0;
+    }
+
+    .mzp-has-dropdown > .mzp-c-menu-title {
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .mzp-c-menu-panel-item a {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+        .mzp-c-menu-panel-item a:hover {
+            background-color: rgba(0, 146, 69, 0.1);
+            padding-left: 20px;
+        }
+}
 
 /* Social Media Links */
 .c-navigation-social {
