@@ -1,0 +1,439 @@
+﻿@page
+@model cdsa.solutions.Pages.PartnersModel
+@{
+    ViewData["Title"] = "Partners";
+}
+
+<style>
+    .partners-hero {
+        background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%), url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&q=80') center/cover;
+        color: white;
+        padding: 80px 20px;
+        text-align: center;
+        margin-bottom: 60px;
+        position: relative;
+    }
+
+        .partners-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .partners-hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+    .partners-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px 80px;
+    }
+
+    .partner-card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        margin-bottom: 40px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .partner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .partner-card.featured {
+            border: 3px solid #667eea;
+            position: relative;
+        }
+
+    .featured-badge {
+        position: absolute;
+        top: -15px;
+        right: 30px;
+        background: #009245;
+        color: white;
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .partner-header {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+    }
+
+    .partner-logo {
+        width: 120px;
+        height: 120px;
+        background: white;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        overflow: hidden;
+        padding: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+        .partner-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    .partner-title {
+        flex: 1;
+        min-width: 250px;
+    }
+
+        .partner-title h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+
+    .partner-type {
+        display: inline-block;
+        background: #009245;
+        color: white;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .partner-description {
+        color: #009245;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 25px;
+    }
+
+    .partner-details {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-bottom: 25px;
+    }
+
+    .detail-item {
+        background: #f7fafc;
+        padding: 20px;
+        border-radius: 8px;
+        border-left: 4px solid #667eea;
+    }
+
+        .detail-item h4 {
+            font-size: 0.9rem;
+            color: #667eea;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .detail-item p {
+            color: #2d3748;
+            font-size: 1rem;
+            margin: 0;
+        }
+
+    .partnership-highlights {
+        background: #edf2f7;
+        padding: 25px;
+        border-radius: 8px;
+        margin-bottom: 25px;
+    }
+
+        .partnership-highlights h3 {
+            color: #2d3748;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .partnership-highlights ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .partnership-highlights li {
+            padding: 10px 0 10px 30px;
+            position: relative;
+            color: #4a5568;
+            font-size: 1.05rem;
+        }
+
+            .partnership-highlights li:before {
+                content: "✓";
+                position: absolute;
+                left: 0;
+                color: #667eea;
+                font-weight: bold;
+                font-size: 1.3rem;
+            }
+
+    .partner-link {
+        display: inline-block;
+        background: #667eea;
+        color: white;
+        padding: 12px 30px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background 0.3s ease;
+        margin-right: 15px;
+    }
+
+        .partner-link:hover {
+            background: #764ba2;
+            color: white;
+            text-decoration: none;
+        }
+
+        .partner-link.secondary {
+            background: #e2e8f0;
+            color: #2d3748;
+        }
+
+            .partner-link.secondary:hover {
+                background: #cbd5e0;
+                color: #2d3748;
+            }
+
+    .become-partner {
+        background: #009245;
+        color: white;
+        padding: 60px 40px;
+        border-radius: 12px;
+        text-align: center;
+        margin-top: 60px;
+    }
+
+        .become-partner h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .become-partner p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+    .cta-button {
+        display: inline-block;
+        background: white;
+        color: #f5576c;
+        padding: 15px 40px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.1rem;
+        transition: transform 0.3s ease;
+    }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            color: #f5576c;
+            text-decoration: none;
+        }
+
+    .stats-banner {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+        margin: 60px 0;
+        text-align: center;
+    }
+
+    .stat-item {
+        padding: 30px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .stat-number {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #667eea;
+        margin-bottom: 10px;
+    }
+
+    .stat-label {
+        color: #4a5568;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    @@media (max-width: 768px) {
+        .partners-hero h1 {
+            font-size: 2rem;
+        }
+
+        .partner-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .partner-logo {
+            width: 80px;
+            height: 80px;
+        }
+    }
+</style>
+
+<div class="partners-hero">
+    <h1>Our Strategic Partners</h1>
+    <p>
+        Together, we're building a future where technology empowers communities,
+        creates opportunities, and drives sustainable development across Africa.
+    </p>
+</div>
+
+<div class="partners-container">
+ <!-- Featured Partner: AI for Good -->
+    <div class="partner-card featured">
+        <span class="featured-badge">🌟 AI For Good Partner</span>
+
+        <div class="partner-header">
+            <div class="partner-logo">
+                <img src="/images/image (1).png" alt="AI for Good Logo">
+            </div>
+            <div class="partner-title">
+                <h2>AI for Good</h2>
+                <span class="partner-type">Strategic Partner • UN Initiative</span>
+            </div>
+        </div>
+
+        <div class="partner-description">
+            <p>
+                AI for Good is the premier United Nations platform advancing artificial intelligence
+                for the Sustainable Development Goals. Organized by the International Telecommunication
+                Union (ITU) in collaboration with over 40 UN agencies, AI for Good identifies and scales
+                AI solutions that create positive impact for humanity. Through this partnership, CDSA
+                gains access to global AI expertise, best practices, and a network of innovators
+                committed to using AI as a force for social good.
+            </p>
+        </div>
+
+        <div class="partnership-highlights">
+            <h3>Partnership Impact</h3>
+            <ul>
+                <li>Access to global AI innovation network and knowledge resources</li>
+                <li>Alignment with UN Sustainable Development Goals framework</li>
+                <li>Opportunities for youth to engage with international AI community</li>
+                <li>Exposure to cutting-edge AI solutions addressing global challenges</li>
+                <li>Platform for showcasing South African AI talent and innovation</li>
+            </ul>
+        </div>
+
+        <div class="partner-details">
+            <div class="detail-item">
+                <h4>Partnership Focus</h4>
+                <p>AI for Social Impact & SDGs</p>
+            </div>
+            <div class="detail-item">
+                <h4>Collaboration Area</h4>
+                <p>Skills Development, Innovation & Global Network Access</p>
+            </div>
+            <div class="detail-item">
+                <h4>Partnership Established</h4>
+                <p>2025</p>
+            </div>
+            <div class="detail-item">
+                <h4>Partner Type</h4>
+                <p>UN Initiative (ITU + 40 UN Agencies)</p>
+            </div>
+        </div>
+
+        <a href="https://aiforgood.itu.int/" target="_blank" class="partner-link">
+            Visit AI for Good →
+        </a>
+        <a href="https://aiforgood.itu.int/about-us/" target="_blank" class="partner-link secondary">
+            Learn More About the Initiative
+        </a>
+    </div>
+
+    <!-- Placeholder for Future Partners Template -->
+    <!--
+    INSTRUCTIONS: To add a new partner, copy this entire commented section and paste it below,
+    then uncomment and customize the details.
+
+    <div class="partner-card">
+        <div class="partner-header">
+            <div class="partner-logo">
+                <img src="URL_TO_PARTNER_LOGO" alt="Partner Name Logo">
+            </div>
+            <div class="partner-title">
+                <h2>Partner Name</h2>
+                <span class="partner-type">Partner Type • Category</span>
+            </div>
+        </div>
+
+        <div class="partner-description">
+            <p>
+                Detailed description of the partner organization and what they do...
+            </p>
+        </div>
+
+        <div class="partnership-highlights">
+            <h3>Partnership Impact</h3>
+            <ul>
+                <li>Key benefit or impact point 1</li>
+                <li>Key benefit or impact point 2</li>
+                <li>Key benefit or impact point 3</li>
+                <li>Key benefit or impact point 4</li>
+            </ul>
+        </div>
+
+        <div class="partner-details">
+            <div class="detail-item">
+                <h4>Partnership Focus</h4>
+                <p>Focus area description</p>
+            </div>
+            <div class="detail-item">
+                <h4>Collaboration Area</h4>
+                <p>Collaboration details</p>
+            </div>
+            <div class="detail-item">
+                <h4>Partnership Established</h4>
+                <p>Year</p>
+            </div>
+            <div class="detail-item">
+                <h4>Partner Type</h4>
+                <p>Type description</p>
+            </div>
+        </div>
+
+        <a href="https://partner-website.com" target="_blank" class="partner-link">
+            Visit Partner →
+        </a>
+    </div>
+    -->
+    <!-- Call to Action -->
+    <div class="become-partner">
+        <h2>Become a Strategic Partner</h2>
+        <p>
+            Join us in empowering South African youth with world-class digital skills.
+            Whether you're in tech, education, government, or youth development, let's co-create
+            solutions that drive sustainable impact across Africa.
+        </p>
+        <a href="https://wa.me/27762201837?text=Hi%20CDSA,%20I'm%20interested%20in%20partnering"
+           class="cta-button">
+            Partner With Us Today
+        </a>
+    </div>
+</div>
