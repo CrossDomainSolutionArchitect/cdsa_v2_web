@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("cdsa.solutions")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2f80e1e0bcb851991c93ef21e4bdf20a39a5773d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+024b09f2dea8f4eb04edd14b03a8fc6de0d0d68c")]
 [assembly: System.Reflection.AssemblyProductAttribute("cdsa.solutions")]
 [assembly: System.Reflection.AssemblyTitleAttribute("cdsa.solutions")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
