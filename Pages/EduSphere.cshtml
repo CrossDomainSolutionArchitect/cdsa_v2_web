@@ -1,0 +1,70 @@
+﻿@page
+@model cdsa.solutions.Pages.EduSphereModel
+
+@{
+    ViewData["Title"] = "EduSphere — Empowering Learning Everywhere";
+}
+
+<section class="edusphere-hero">
+    <div class="hero-inner">
+        <div class="hero-text">
+            <h1>EduSphere</h1>
+            <p class="tagline">Bridging digital access, AI learning and pathways to opportunity for South Africa's learners.</p>
+            <p class="lead">Zero-cost learning powered by IBM SkillsBuild, community hubs and hybrid learning — designed to be inclusive, offline-first and future ready.</p>
+            <div class="cta-row">
+                <a class="btn btn-primary" href="#programs">Explore Programs</a>
+                <a class="btn btn-outline" href="#partner">Partner with us</a>
+            </div>
+        </div>
+
+        <div class="hero-card" aria-hidden="false">
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-value">@Model.LearnerCount</div>
+                    <div class="stat-label">Learners</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">@Model.SchoolsConnected</div>
+                    <div class="stat-label">Schools</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">@Model.Partners</div>
+                    <div class="stat-label">Partners</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="programs" class="section programs">
+    <h2>Core Programs</h2>
+    <div class="cards-grid">
+        <article class="card">
+            <h3>AI & Digital Skills</h3>
+            <p>IBM SkillsBuild micro-credentials, hands-on labs and local projects for learners and teachers.</p>
+        </article>
+        <article class="card">
+            <h3>Connectivity Hubs</h3>
+            <p>Offline-first EduSIM kits, community hotspots and low-bandwidth learning paths.</p>
+        </article>
+        <article class="card">
+            <h3>Teacher Champions</h3>
+            <p>Continuous professional development (CPD) in digital pedagogy and AI ethics.</p>
+        </article>
+        <article class="card">
+            <h3>Hire-a-Learner</h3>
+            <p>Talent expos, virtual internships and a portfolio-to-hire pipeline.</p>
+        </article>
+    </div>
+</section>
+
+<section id="impact" class="section impact">
+    <h2>Impact & Roadmap</h2>
+    <p>EduSphere is piloting in selected provinces. Our target: 15,000 learners and 500 teachers within the first 18 months.</p>
+    <div class="timeline">
+        <div><strong>Phase 1</strong><span>Pilot: 3 schools</span></div>
+        <div><strong>Phase 2</strong><span>Scale to 25 schools</span></div>
+        <div><strong>Phase 3</strong><span>National roll-out</span></div>
+    </div>
+</section>
+
