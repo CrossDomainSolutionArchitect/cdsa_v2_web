@@ -2,6 +2,7 @@ wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\images\ChatGPT Image Oct 2, 2025, 05_32_49 AM.png
 wwwroot\images\EduSphere_Logo.png
+wwwroot\images\Edu_logo.png
 wwwroot\images\gep-logo-square2.png
 wwwroot\images\image (1).png
 wwwroot\images\PastryEats.png
